@@ -704,11 +704,11 @@ function ls_get_footer_socials(): array {
 
 function ls_social_icon_svg(string $icon): string {
     $paths = [
-        'facebook' => '<path d="M14 3h4a1 1 0 0 1 1 1v4h-3v3h3v9h-4v-9h-3V8h3V5.5A2.5 2.5 0 0 1 17.5 3H14z"/>',
+        'facebook' => '<path d="M13.4 20v-7.1h2.4l.36-2.77H13.4V8.36c0-.8.22-1.35 1.38-1.35h1.47V4.53c-.25-.03-1.13-.11-2.14-.11-2.12 0-3.57 1.29-3.57 3.67v2.04H8.15v2.77h2.39V20h2.86Z"/>',
         'instagram' => '<path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm-5 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5Zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5ZM17 6.75a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17 6.75Z"/>',
         'youtube' => '<path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.76C18.28 5 12 5 12 5s-6.28 0-7.84.44A2.5 2.5 0 0 0 2.4 7.2 26.8 26.8 0 0 0 2 12a26.8 26.8 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.76C5.72 19 12 19 12 19s6.28 0 7.84-.44a2.5 2.5 0 0 0 1.76-1.76A26.8 26.8 0 0 0 22 12a26.8 26.8 0 0 0-.4-4.8ZM10 15V9l5 3-5 3Z"/>',
     ];
-    return sprintf('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">%s</svg>', $paths[$icon] ?? '<circle cx="12" cy="12" r="10"/>');
+    return sprintf('<svg class="social-icon social-icon--%s" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">%s</svg>', esc_attr($icon), $paths[$icon] ?? '<circle cx="12" cy="12" r="10"/>');
 }
 
 function ls_icon_svg(string $icon): string {
