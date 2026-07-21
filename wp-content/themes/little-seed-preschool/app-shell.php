@@ -5,6 +5,11 @@ if (!defined('ABSPATH')) {
 
 function ls_get_image_specs(): array {
     return [
+        'little-seed-logo-mark.svg' => [
+            'alt' => 'Little Seed Montessori Preschool logo',
+            'width' => 64,
+            'height' => 64,
+        ],
         'homepage-hero-preschool-school-tour.webp' => [
             'alt' => 'Little Seed preschool children on a school tour',
             'width' => 1920,
@@ -804,7 +809,9 @@ function ls_render_site_header(): void {
         <div class="container site-header__inner">
             <div class="site-header__brand">
                 <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                    <span class="brand__mark" aria-hidden="true">LS</span>
+                    <span class="brand__mark" aria-hidden="true">
+                        <img src="<?php echo esc_url(ls_get_image_url('little-seed-logo-mark.svg')); ?>" alt="" width="64" height="64">
+                    </span>
                     <span class="brand__text">
                         <strong>Little Seed</strong>
                         <small>Montessori Preschool</small>
@@ -861,7 +868,9 @@ function ls_render_mobile_drawer(array $navigation): void {
         <aside class="mobile-drawer__panel" aria-label="<?php esc_attr_e('Mobile navigation', 'little-seed-preschool'); ?>">
             <div class="mobile-drawer__head">
                 <a class="brand brand--drawer" href="<?php echo esc_url(home_url('/')); ?>">
-                    <span class="brand__mark" aria-hidden="true">LS</span>
+                    <span class="brand__mark" aria-hidden="true">
+                        <img src="<?php echo esc_url(ls_get_image_url('little-seed-logo-mark.svg')); ?>" alt="" width="64" height="64">
+                    </span>
                     <span class="brand__text">
                         <strong>Little Seed</strong>
                         <small>Montessori Preschool</small>
@@ -912,7 +921,9 @@ function ls_render_site_footer(): void {
         <div class="container site-footer__grid">
             <div class="site-footer__brand">
                 <a class="brand brand--footer" href="<?php echo esc_url(home_url('/')); ?>">
-                    <span class="brand__mark" aria-hidden="true">LS</span>
+                    <span class="brand__mark" aria-hidden="true">
+                        <img src="<?php echo esc_url(ls_get_image_url('little-seed-logo-mark.svg')); ?>" alt="" width="64" height="64">
+                    </span>
                     <span class="brand__text">
                         <strong>Little Seed</strong>
                         <small>Montessori Preschool</small>
